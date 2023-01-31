@@ -3,7 +3,7 @@ if [[ $1 ]]
 then
   # check if element is in db
   # check if input is digit or text
-  if [[ '^[1-9]*&' =~ $1 ]]
+  if [[ '^[1-9]+$' =~ $1 ]]
   then
     ELEMENT_ID=$($PSQL "SELECT atomic_number from elements WHERE atomic_number=$1;")
   else
